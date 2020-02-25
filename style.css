@@ -1,0 +1,109 @@
+body{
+    
+    --accent-color: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+    transition: var(--transition-delay);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.darkMode{
+    --accent-color: #D0D066;
+    --background-color: #333;
+    --text-color: white;
+}
+
+
+
+.toggleButton{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+}
+
+.toggleButton:hover,
+.toggleButton:focus {
+    transform: scale(1.1);
+}
+
+.toggleButton .icon{
+    margin-right: .5em;
+    color: var(--button-text-color);
+    transition: var(--transition-delay);
+}
+
+.title{
+    font-size: 80px;
+    margin: 0;
+    margin-bottom: .5rem;
+    color: var(--accent-color);
+    transition: var(--transition-delay);
+}
+
+.sun-moon-container{
+    --rotation: 0;
+
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 200vmin;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
+}
+
+.sun,
+.moon{
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 100px;
+    height: 100px;
+    fill: var(--accent-color);
+    transform: rotate(180deg);
+}
+
+.sun{
+    top: 5%;
+    opacity: 1;
+}
+
+.darkMode .sun{
+    opacity: 0;
+}
+
+.moon{
+    bottom: 5%;
+    opacity: 0; 
+}
+
+.darkMode .moon {
+    opacity: 1;
+}
