@@ -107,3 +107,13 @@ body.darkMode{
 .darkMode .moon {
     opacity: 1;
 }
+
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 40px;
+    }
+
+    .sun-moon-container{
+        height: 300vmin;
+    }
+}
