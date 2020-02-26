@@ -116,4 +116,8 @@ body.darkMode{
     .sun-moon-container{
         height: 300vmin;
     }
+
+    .sun{
+        top: 7%;
+    }
 }
